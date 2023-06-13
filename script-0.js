@@ -79,7 +79,7 @@ console.log(name, position);
 
 // map- перебор элементов и применение каждому элементу действие или какую либо функцию- создает новый массив размером с исходный массив; filter -
 // map
-const arr3 = [3, 4, 5, 7, 8, 9, 9];
+const arr3 = [3, 4, 5, 7, 8, 9, 9, 0];
 // const arr3 = [];
 // arr3[0] = 8;
 // arr3[4] = 88;//[24, пусто × 3, 264]
@@ -90,10 +90,12 @@ let arrMap = arr3.map((el, index) => {
   return el * index; //[0, 4, 10, 21, 32, 45, 54]
 });
 console.log(arrMap);
-// filter
-let arrFilt = arr3.filter((el) => {
-  if (el > 7) {
-    return true;
+// filter- return- true либо false!!!!!
+let arrFilt = arr3.filter((el, index) => {
+  if (el % 2 === 0) {
+    return true; //true либо false!!!!! 0 === false
+    // return el * 3; // не сработает, т.к.  true либо false
+    // return index; //true
   }
 });
 console.log(arr3);
