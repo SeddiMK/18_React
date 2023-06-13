@@ -29,3 +29,15 @@ import otm from './otmazka.js'; // в начале файла
 console.log(otmazka6('((какойто текст))'));
 console.log(otmaza('((бyаjhвфнбрф))'));
 console.log(otm('((-------))'));
+// ======
+import { checkLS, showMessage } from './cookies.js';
+if (!checkLS()) {
+  console.log(showMessage("Problem it's 'kaysW' "));
+}
+// ===================================================
+document.querySelector('.out-1').style.cssText = 'border: 1px solid green';
+function fnName() {}
+document.querySelector('.out-1').addEventListener('click', () => {
+  console.log('show click');
+});
+fnName();

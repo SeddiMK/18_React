@@ -4,5 +4,5 @@ export const checkLS = () => {
 };
 
 export const showMessage = (text) => {
-  return `${text}! Message not found`;
+  return `${text}!!! Message not found`;
 };
