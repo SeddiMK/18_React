@@ -22,3 +22,10 @@ univerResult[0] = 4;
 console.log(univerResult);
 
 // ===================================================
+// Import-in Export-out
+import otmazka6 from './otmazka.js'; // в начале файла
+import otmaza from './otmazka.js'; // в начале файла
+import otm from './otmazka.js'; // в начале файла
+console.log(otmazka6('((какойто текст))'));
+console.log(otmaza('((бyаjhвфнбрф))'));
+console.log(otm('((-------))'));
