@@ -1,22 +1,25 @@
-function Header() {
+function Header(props) {
   return (
     <header>
-      <h1>Я Header</h1>
-      <h2>Second Header</h2>
-      <Nav />
+      <h1>{props.data.site_name}</h1>
+      <h2>{props.second_header}</h2>
+      <Nav nav={props.data.nav} />
     </header>
   );
 }
 
-function Nav() {
+function Nav(props) {
+  let data = props.nav;
+  const listElem = data.map((el) => {
+    return (
+      <li key={el.link}>
+        <a href={el.link}>{el.text}</a>
+      </li>
+    );
+  });
   return (
     <nav>
-      <ul>
-        <li>Отзывы</li>
-        <li>Что мы делвем</li>
-        <li>Контакты</li>
-        <li>О Нас</li>
-      </ul>
+      <ul>{listElem}</ul>
     </nav>
   );
 }
