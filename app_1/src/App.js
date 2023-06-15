@@ -29,13 +29,23 @@ const goods = [
 ];
 const footSocialIcons = [
   {
-    twitter:
+    title: 'twitter',
+    image:
       'https://cdn1.iconfinder.com/data/icons/logotypes/32/twitter-512.png',
-    pinterest:
+  },
+  {
+    title: 'pinterest',
+    image:
       'https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Pinterest_colored_svg-512.png',
-    instagram:
+  },
+  {
+    title: 'instagram',
+    image:
       'https://cdn3.iconfinder.com/data/icons/2018-social-media-logotypes/1000/2018_social_media_popular_app_logo_instagram-512.png',
-    google:
+  },
+  {
+    title: 'google',
+    image:
       'https://cdn4.iconfinder.com/data/icons/logos-brands-in-colors/48/google-gmail-512.png',
   },
 ];
@@ -56,15 +66,7 @@ function App() {
         );
       })}
       {footSocialIcons.map((el, index) => {
-        return (
-          <Footer
-            key={index}
-            twitter={el.twitter}
-            pinterest={el.pinterest}
-            instagram={el.instagram}
-            google={el.google}
-          />
-        );
+        return <Footer key={index} title={el.title} image={el.image} />;
       })}
     </>
   );
