@@ -2,6 +2,7 @@ import './App.css';
 import Test from './Test';
 import Header from './Header/Header';
 import Goods from './Goods';
+import Footer from './Footer/Footer';
 
 const headerData = {
   site_name: 'my text site NAME',
@@ -54,17 +55,17 @@ function App() {
           />
         );
       })}
-			{footSocialIcons.map((el,index)=>{
-				return(
-					<Footer
-					key={index},
-					twitter={el.twitter},
-					pinterest={el.pinterest},
-					instagram={el.instagram},
-					google={el.google},
-					/>
-				);
-			})}
+      {footSocialIcons.map((el, index) => {
+        return (
+          <Footer
+            key={index}
+            twitter={el.twitter}
+            pinterest={el.pinterest}
+            instagram={el.instagram}
+            google={el.google}
+          />
+        );
+      })}
     </>
   );
 }
