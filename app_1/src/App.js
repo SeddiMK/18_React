@@ -26,6 +26,14 @@ const goods = [
       'https://cdn1.iconfinder.com/data/icons/fresh-fruit-2/128/pear-512.png',
   },
 ];
+const footMenu = [
+  {
+    title: 'apple',
+    cost: '1000$',
+    image:
+      'https://cdn3.iconfinder.com/data/icons/tropical-11/512/Pinaple-512.png',
+  },
+];
 
 function App() {
   return (
