@@ -26,12 +26,16 @@ const goods = [
       'https://cdn1.iconfinder.com/data/icons/fresh-fruit-2/128/pear-512.png',
   },
 ];
-const footMenu = [
+const footSocialIcons = [
   {
-    title: 'apple',
-    cost: '1000$',
-    image:
-      'https://cdn3.iconfinder.com/data/icons/tropical-11/512/Pinaple-512.png',
+    twitter:
+      'https://cdn1.iconfinder.com/data/icons/logotypes/32/twitter-512.png',
+    pinterest:
+      'https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Pinterest_colored_svg-512.png',
+    instagram:
+      'https://cdn3.iconfinder.com/data/icons/2018-social-media-logotypes/1000/2018_social_media_popular_app_logo_instagram-512.png',
+    google:
+      'https://cdn4.iconfinder.com/data/icons/logos-brands-in-colors/48/google-gmail-512.png',
   },
 ];
 
@@ -50,6 +54,17 @@ function App() {
           />
         );
       })}
+			{footSocialIcons.map((el,index)=>{
+				return(
+					<Footer
+					key={index},
+					twitter={el.twitter},
+					pinterest={el.pinterest},
+					instagram={el.instagram},
+					google={el.google},
+					/>
+				);
+			})}
     </>
   );
 }
