@@ -1,16 +1,21 @@
+// import { matchPath } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+
 function Users() {
+  // let match = matchPath();
+  let { pathname } = useLocation();
   return (
     <>
       <h2>Users</h2>
       <ul>
         <li>
-          <a href="/users/ivanov">Ivanov</a>
+          <a href={`${pathname}/ivanov`}>Ivanov</a>
         </li>
         <li>
-          <a href="/users/petrov">Petrov</a>
+          <a href={`${pathname}/petrov`}>Petrov</a>
         </li>
         <li>
-          <a href="/users/egorov">Egorov</a>
+          <a href={`${pathname}/egorov`}>Egorov</a>
         </li>
       </ul>
     </>
