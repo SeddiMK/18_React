@@ -3,7 +3,7 @@ function Header() {
     <>
       <nav>
         <li>
-          <a href="/">Home</a>
+          <a href="/">Main</a>
         </li>
         <li>
           <a href="/about">About</a>
