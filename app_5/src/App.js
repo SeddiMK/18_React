@@ -2,7 +2,11 @@ import './App.css';
 import Comp1 from './Comp1';
 
 function App() {
-  return <></>;
+  return (
+    <>
+      <Comp1 />
+    </>
+  );
 }
 
 export default App;
