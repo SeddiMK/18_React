@@ -1,10 +1,12 @@
 import './App.css';
 import React from 'react';
+import { useState } from 'react';
 
 function App() {
   // let a = 55;
   let textInput = React.createRef();
   let textOut = React.createRef();
+  const [output, setOutput] = useState('hi hi hi');
 
   function f1(arg) {
     console.log('f1 - works ' + arg);
@@ -18,6 +20,7 @@ function App() {
     // console.log(event.target.value);
     console.log(textInput.current.value);
     textOut.current.innerHTML = textInput.current.value;
+    setOutput(textInput.current.value);
   }
   return (
     <>
@@ -40,6 +43,7 @@ function App() {
         />
         <p ref={textOut}></p>
       </section>
+      <h3>Ввожу текст сюда: {output} </h3>
     </>
   );
 }
