@@ -20,7 +20,7 @@ function App() {
       <Router>
         <nav>
           <li>
-            <NavLink exact to="/" activeClassName="primer">
+            <NavLink exact to="/" className="primer">
               Mainnnnnnnnnnnnnnn
             </NavLink>
           </li>
