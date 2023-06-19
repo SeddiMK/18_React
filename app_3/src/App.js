@@ -6,24 +6,31 @@ import Main from './Main';
 import UserId from './UserId';
 import Error from './Error';
 
-import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Route,
+  NavLink,
+  Routes,
+} from 'react-router-dom';
 
 function App() {
   return (
     <>
       <Header></Header>
       <Router>
-        {/* <nav>
+        <nav>
           <li>
-            <Link to="/">Main</Link>
+            <NavLink exact to="/" activeClassName="primer">
+              Mainnnnnnnnnnnnnnn
+            </NavLink>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <NavLink to="/about">Aboutttttttttttt</NavLink>
           </li>
           <li>
-            <Link to="/users">Usersssssssss</Link>
+            <NavLink to="/users">Usersssssssss</NavLink>
           </li>
-        </nav> */}
+        </nav>
         <Routes>
           <Route exact path="/" element={<Main />}></Route>
           <Route path="/about" element={<About />}></Route>

@@ -4,6 +4,8 @@ import { useLocation } from 'react-router-dom';
 function Users() {
   // let match = matchPath();
   let { pathname } = useLocation();
+  // console.log(useLocation());
+
   return (
     <>
       <h2>Users</h2>

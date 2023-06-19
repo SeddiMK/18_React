@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+nav .active {
+  color: #61dafb;
+}
+.primer {
+  color: green;
+  font-weight: 800;
+}
