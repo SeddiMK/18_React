@@ -42,7 +42,11 @@ class Comp1 extends React.Component {
           <button onClick={this.addComment}>Add comment</button>
         </div>
         <div>
-          <ul></ul>
+          <ul>
+            {this.state.comment.map((el, ind) => (
+              <li key={ind.toString()}>{el}</li>
+            ))}
+          </ul>
         </div>
       </>
     );
