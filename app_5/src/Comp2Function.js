@@ -3,11 +3,20 @@ import { useState } from 'react';
 
 function Comp2() {
   const [count, setCount] = useState(0);
+  const [comment, setComment] = useState([]);
+
+  let myRef = React.createRef();
 
   let handler = () => {
     let currentCount = count;
     currentCount++;
     setCount(currentCount);
+  };
+  let addComment = () => {
+    let commentValue = myRef.current.value;
+    let comments = [...comment, commentValue];
+    setComment(comments);
+    myRef.current.value = '';
   };
 
   return (
@@ -16,8 +25,22 @@ function Comp2() {
       <div>
         <button onClick={handler}>This button change State</button>
       </div>
-      <div>{this.state.count % 2 === 0 ? 'even' : 'odd'}</div>
-      <div>{this.state.count}</div>
+      <div>{count % 2 === 0 ? 'even' : 'odd'}</div>
+      <div>{count}</div>
+      {/* =================================== */}
+      <div>
+        <textarea ref={myRef}></textarea>
+      </div>
+      <div>
+        <button onClick={addComment}>Add comment</button>
+      </div>
+      <div>
+        <ul>
+          {comment.map((el, ind) => (
+            <li key={ind.toString()}>{el}</li>
+          ))}
+        </ul>
+      </div>
     </>
   );
 }
