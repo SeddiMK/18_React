@@ -23,6 +23,15 @@ class Comp1 extends React.Component {
         </div>
         <div>{this.state.count % 2 === 0 ? 'even' : 'odd'}</div>
         <div>{this.state.count}</div>
+        <div>
+          <textarea></textarea>
+        </div>
+        <div>
+          <button onClick={this.addComment}>Add comment</button>
+        </div>
+        <div>
+          <ul></ul>
+        </div>
       </>
     );
   }
