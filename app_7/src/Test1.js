@@ -29,6 +29,10 @@ class Test1 extends React.Component {
     console.log('componentDidMount');
   }
 
+  componentDidUpdate() {
+    console.log('componentDidUpdate');
+  }
+
   render() {
     console.log('render_1');
     return (
