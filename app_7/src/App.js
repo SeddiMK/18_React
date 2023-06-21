@@ -5,7 +5,7 @@ import Test2 from './Test2Function';
 function App() {
   return (
     <>
-      <Test1 arg={86} />
+      {/* <Test1 arg={86} /> */}
       <hr />
       <Test2 arg={93} />
     </>
